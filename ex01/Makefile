@@ -1,5 +1,5 @@
 NAME		= tests
-SRC			= main.cpp Animal.cpp Dog.cpp Cat.cpp WrongCat.cpp WrongAnimal.cpp
+SRC			= main.cpp Animal.cpp Dog.cpp Cat.cpp Brain.cpp
 CC			= c++
 RM			= rm -f
 HEADER		= -I .

@@ -3,6 +3,7 @@
 
 #include <string>
 #include <iostream>
+#include "Brain.hpp"
 
 class Animal
 {
@@ -13,8 +14,12 @@ class Animal
         Animal& operator=(const Animal& ref);
         std::string getType() const;
         virtual void makeSound() const;
+
+        std::string getIdea(int index) const;
+        void setIdea(int index, std::string idea) const;
     protected:
         std::string type;
+        Brain*  _myBrain;
 };
 
 #endif

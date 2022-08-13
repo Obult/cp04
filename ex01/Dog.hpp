@@ -12,8 +12,6 @@ class Dog : public Animal
         Dog(const Dog& ref);
         Dog& operator=(const Dog& ref);
         void makeSound() const;
-    private:
-        Brain*  _myBrain;
 };
 
 #endif

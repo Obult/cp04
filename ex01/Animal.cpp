@@ -2,11 +2,13 @@
 
 Animal::Animal()
 {
+    _myBrain = new Brain();
     std::cout << "Animal constructor" << std::endl;
 }
 
 Animal::~Animal()
 {
+    delete _myBrain;
     std::cout << "Animal destructor" << std::endl;
 }
 
@@ -31,4 +33,22 @@ void    Animal::makeSound() const
 std::string Animal::getType() const
 {
     return type;
+}
+
+void    Animal::setIdea(int index, std::string idea) const
+{
+    _myBrain->setIdea(index, idea);
+}
+
+std::string Animal::getIdea(int index) const
+{
+    // try
+    // {
+    //     return _myBrain->getIdea(index);
+    // }
+    // catch (std::exception& ref)
+    // {
+    //     std::cout << ref.what();
+    // }
+    return _myBrain->getIdea(index);
 }

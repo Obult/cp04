@@ -37,6 +37,11 @@ void    Brain::setIdea(int index, std::string idea)
 std::string Brain::getIdea(int index)
 {
     if (index < 0 || index > 99)
-        return ;
+        throw Brain::OutOfBound();
     return _ideas[index];
+}
+
+const char* Brain::OutOfBound::what() const throw ()
+{
+    return "Out of bound\n";
 }

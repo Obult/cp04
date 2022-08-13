@@ -12,6 +12,7 @@ class Cat : public Animal
         Cat(const Cat& ref);
         Cat& operator=(const Cat& ref);
         void makeSound() const;
+        
     private:
         Brain*  _myBrain;
 };
