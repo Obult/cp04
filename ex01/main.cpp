@@ -19,9 +19,11 @@ int main()
     std::cout << d->getIdea(0) << std::endl;
 
     Dog precopy;
-    precopy.setIdea(0, "mijn eigen gedachte");
+    precopy.setIdea(0, "een gedachte");
     const Animal* copy = new Dog(precopy);
     std::cout << copy->getIdea(0) << std::endl;
+    precopy.setIdea(0, "mijn eigen gedachte");
+    std::cout << copy->getIdea(0) << std::endl; // they are using the same brain but should have their own brain
 
     try
     {
