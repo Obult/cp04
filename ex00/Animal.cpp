@@ -23,12 +23,12 @@ Animal& Animal::operator=(const Animal& ref)
     return *this;
 }
 
-void    Animal::makeSound()
+void    Animal::makeSound() const
 {
     std::cout << "bare Animal does not make sound" << std::endl;
 }
 
-std::string Animal::getType()
+std::string Animal::getType() const
 {
     return type;
 }

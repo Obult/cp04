@@ -3,14 +3,14 @@
 
 #include "Animal.hpp"
 
-class Cat :: public Animal
+class Cat : public Animal
 {
     public:
     Cat();
     ~Cat();
     Cat(const Cat& ref);
     Cat& operator=(const Cat& ref);
-    void makeSound();
+    void makeSound() const;
 };
 
 #endif
