@@ -11,9 +11,11 @@ Cat::~Cat()
     std::cout << "I was a Cat" << std::endl;
 }
 
-Cat::Cat(const Cat& ref)
+Cat::Cat(const Cat& ref) : Animal(ref)
 {
-    *this = ref;
+    type = ref.type;
+    *_myBrain = *ref._myBrain;
+    std::cout << "copy Cat" << std::endl;
 }
 
 Cat& Cat::operator=(const Cat& ref)
