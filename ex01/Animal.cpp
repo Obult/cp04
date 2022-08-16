@@ -22,6 +22,8 @@ Animal& Animal::operator=(const Animal& ref)
 {
     std::cout << "Animal = overload!!!" << std::endl;
     type = ref.type;
+    _myBrain = new Brain();
+    *_myBrain = *ref._myBrain;
     return *this;
 }
 

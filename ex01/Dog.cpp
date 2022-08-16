@@ -13,13 +13,16 @@ Dog::~Dog()
 
 Dog::Dog(const Dog& ref)
 {
-    *this = ref;
+    type = ref.type;
+    *_myBrain = *ref._myBrain;
+    std::cout << "copy dog" << std::endl;
 }
 
 Dog&    Dog::operator=(const Dog& ref)
 {
     type = ref.type;
-    _myBrain = ref._myBrain;
+    _myBrain = new Brain();
+    *_myBrain = *ref._myBrain;
     return *this;
 }
 

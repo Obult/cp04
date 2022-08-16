@@ -19,7 +19,8 @@ Cat::Cat(const Cat& ref)
 Cat& Cat::operator=(const Cat& ref)
 {
     type = ref.type;
-    _myBrain = ref._myBrain;    // this needs to be tested if a second animal uses the same brain
+    _myBrain = new Brain();
+    *_myBrain = *ref._myBrain;
     return *this;
 }
 
