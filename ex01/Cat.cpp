@@ -13,8 +13,6 @@ Cat::~Cat()
 
 Cat::Cat(const Cat& ref) : Animal(ref)
 {
-    type = ref.type;
-    *_myBrain = *ref._myBrain;
     std::cout << "copy Cat" << std::endl;
 }
 

@@ -11,10 +11,8 @@ Dog::~Dog()
     std::cout << "I was a Dog" << std::endl;
 }
 
-Dog::Dog(const Dog& ref)
+Dog::Dog(const Dog& ref) : Animal(ref)
 {
-    type = ref.type;
-    *_myBrain = *ref._myBrain;
     std::cout << "copy dog" << std::endl;
 }
 

@@ -14,8 +14,7 @@ Animal::~Animal()
 
 Animal::Animal(const Animal& ref)
 {
-    type = ref.type;
-    *_myBrain = *ref._myBrain;
+    *this = ref;
     std::cout << "Animal copied" << std::endl;
 }
 

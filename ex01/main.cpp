@@ -39,7 +39,7 @@ int main()
     const Animal* copy = new Dog(precopy);
 
     Dog extra = precopy;
-    std::cout << extra.getIdea(0);
+    std::cout << extra.getIdea(0) << std::endl;
     std::cout << copy->getIdea(0) << std::endl;
     precopy.setIdea(0, "my idea");
     std::cout << copy->getIdea(0) << std::endl;
